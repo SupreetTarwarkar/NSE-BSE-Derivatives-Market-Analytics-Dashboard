@@ -10,7 +10,7 @@ Power BI-based derivatives market analytics dashboard developed using NSE & BSE 
 - Track FII activity
 - Monitor participant positioning
 - Identify Long/Short build-ups
-- Generate next-day trading insights
+- Generate actionable trading insights using derivatives market data
 
 ## Tech Stack
 
@@ -26,6 +26,7 @@ Power BI-based derivatives market analytics dashboard developed using NSE & BSE 
 - BSE Derivatives Data
 - FII Activity Data
 - Participant-wise OI Data
+- Cash Mrket Deliery Data
 
 ## Dashboard Features
 
