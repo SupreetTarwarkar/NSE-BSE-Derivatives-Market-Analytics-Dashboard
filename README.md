@@ -1,150 +1,176 @@
-# NSE & BSE Derivatives Market Analytics Dashboard
+# NSE Derivatives Open Interest Analytics Dashboard
 
-## Short Description
+## Short Description / Purpose
 
-The NSE & BSE Derivatives Market Analytics Dashboard is a comprehensive Power BI solution developed to analyze Indian equity and derivatives markets using official NSE and BSE market data. The dashboard combines Stock Delivery Statistics, FII Derivatives Activity, Long-Short Ratios, Open Interest (OI), Change in Open Interest, Futures Positioning, and Market Sentiment Analysis into a single reporting platform.
-
-The solution enables traders, analysts, and market researchers to monitor institutional participation, identify derivative market trends, track open interest accumulation, and analyze stock-specific market behavior through interactive visualizations.
-
----
+End-to-end derivatives analytics solution developed using Power BI, SQL, and NSE Futures & Options data. The dashboard analyzes Open Interest (OI), Change in Open Interest, Long-Short Ratio, Net Contracts, and price movements to identify market positioning, sentiment shifts, and derivative trading opportunities across Index and Stock derivatives.
 
 ## Tech Stack
 
-* Power BI
-* Power Query
-* DAX
-* Microsoft Excel
-* NSE Bhav Copy
-* BSE Bhav Copy
+The dashboard was built using the following tools and technologies:
 
----
+- Power BI : Data visualization and reporting
+- SQL : Data extraction and transformation
+- Power Query : Data transformation and cleaning
+- DAX (Data Analysis Expressions) : Measures and business calculations
+- Data Modeling : Relationship management and analytical structure
+- Excel / CSV Files : NSE Derivatives Data Source
 
 ## Data Source
 
-The dashboard integrates multiple datasets from official NSE and BSE sources:
+The dashboard uses NSE Derivatives (Futures & Options) data containing:
 
-### Data Files
+- Index Futures Data
+- Index Options Data
+- Stock Futures Data
+- Stock Options Data
+- Open Interest (OI)
+- Change in Open Interest
+- Long Positions
+- Short Positions
+- Net Contracts
+- Long-Short Ratio
+- Expiry Information
+- Daily Price Data (OHLC)
 
-* NSE Derivatives Bhav Copy
-* BSE Derivatives Bhav Copy
-* Security Bhav Data (Stock Delivery Data)
-* FII Derivatives Statistics
-* F&O Participant Open Interest Statistics
+## Features / Highlights
 
-### Official Sources
+### Business Problem
 
-* NSE Capital Market Reports
-* NSE Derivatives Reports
-* BSE Bhav Copy Reports
+Derivative markets generate massive volumes of Futures and Options data every trading day. However, identifying institutional positioning, tracking changes in market sentiment, analyzing Open Interest behavior, and monitoring Long-Short activity can be difficult without a centralized analytics solution.
 
-To maintain repository efficiency, only sample files are included while historical data can be downloaded from official exchange websites.
+### Goal of the Dashboard
 
----
+- Monitor derivative market activity
+- Analyze Open Interest trends
+- Track Change in Open Interest
+- Evaluate Long-Short positioning
+- Identify market sentiment shifts
+- Support data-driven trading decisions
 
-## Business Problem
+### Walk Through of Key Visuals
 
-Market participants often rely on multiple reports to understand market sentiment, institutional positioning, delivery activity, and derivative market behavior. Analyzing these datasets separately can be time-consuming and inefficient.
+#### Stock Futures Analytics
 
-This dashboard consolidates key equity and derivatives datasets into a single analytical platform, enabling faster market analysis and improved decision-making.
+- Candlestick Price Analysis
+- Number of Trades Analysis
+- Long-Short Ratio Trend
+- Stock Selection Filter
+- Date Range Analysis
+- Symbol-wise Performance Analysis
 
----
+#### Index Futures Analytics
 
-## Dashboard Pages
+- NIFTY Price Trend Analysis
+- Net Contracts by Date
+- Index Futures Positioning
+- Index Options Positioning
+- Open Interest Trend Analysis
+- Market Sentiment Monitoring
 
-### Landing Page
+#### Client Position Analytics
 
-Provides centralized navigation to all analytical modules.
+- Long-Short Ratio Analysis
+- Client-wise Position Tracking
+- Future Index Long Positions
+- Future Index Short Positions
+- Institutional Position Monitoring
+- Historical Position Trend Analysis
 
-### Stock Delivery Analysis
+#### Open Interest Statistics
 
-Analyzes delivery percentage, number of trades, traded quantity, and stock-wise participation trends to identify accumulation and distribution patterns.
+- Strike-wise Open Interest Analysis
+- Expiry-wise Analysis
+- Call vs Put Open Interest Comparison
+- Open Interest Concentration Zones
+- Support and Resistance Identification
+- Cumulative Open Interest Analysis
 
-### F&O FII Statistics
+#### Change in Open Interest Analytics
 
-Tracks FII derivative activity including total contracts, long positions, short positions, and daily institutional participation.
+- Change in OI Analysis
+- Long Build-Up Detection
+- Short Build-Up Detection
+- Long Unwinding Detection
+- Short Covering Detection
+- Cumulative Change in Open Interest
 
-### Long Short Ratio Analysis
+### Business Impact & Insights
 
-Monitors institutional long-short exposure and ratio trends to evaluate market sentiment and directional bias.
+- Identified important support and resistance zones using Open Interest concentration.
+- Tracked institutional positioning through Long-Short Ratio analysis.
+- Enabled monitoring of derivative market sentiment using Futures and Options activity.
+- Improved understanding of market participation through Net Contracts analysis.
+- Helped identify Long Build-Up, Short Build-Up, Long Unwinding, and Short Covering opportunities.
+- Supported trading and market analysis through interactive derivative analytics.
 
-### Index Open Interest Statistics
+## Dashboard Screenshots
 
-Analyzes Index Futures and Index Options Open Interest activity across different expiries and trading sessions.
+### Stock Futures Analytics
+
+![Stock Futures Analytics](Images/1.%20Stock_Futures_Analytics.png)
+
+### Index Futures Analytics
+
+![Index Futures Analytics](Images/2.%20Index_Futures_Analytics.png)
+
+### Client Position Analytics
+
+![Client_Position_Analytics](Images/3.%20Client_Position_Analytics.png)
+
+### Open Interest Statistics
+
+![Open_Interest_Statistics](Images/4.%20Open_Interest_Statistics.png)
 
 ### Stock Open Interest Statistics
 
-Tracks stock-level derivative participation through Open Interest and Change in Open Interest analysis.
-
-### Future Stock OI Statistics
-
-Provides detailed analysis of stock futures positioning and OI accumulation trends.
+![Stock_OI_Statistics](Images/5.%20Stock_OI_Statistics.png)
 
 ### Change in Open Interest Statistics
 
-Evaluates OI changes across derivative instruments to identify emerging market opportunities.
+![Change_in_OI_Statistics](Images/6.%20Change_in_OI_Statistics.png)
 
-### OI Classification Analysis
+### Open Interest Build-Up Analysis
 
-Classifies stocks into:
+![OI_Build_Up_Analysis](Images/7.%20OI_Build_Up_Analysis.png)
 
-* Long Build Up
-* Short Build Up
-* Long Unwinding
-* Short Covering
+## Dataset
 
-based on price movement and Open Interest changes.
+The dashboard uses NSE Derivatives datasets containing:
 
----
+- Index Futures Data
+- Index Options Data
+- Stock Futures Data
+- Stock Options Data
+- Client Position Data
+- Open Interest Data
+- Change in Open Interest Data
 
-## Key KPIs
+Dataset files are available in the Dataset folder of this repository.
 
-* Open Interest (OI)
-* Change in Open Interest
-* Long Positions
-* Short Positions
-* Long Short Ratio
-* Delivery Percentage
-* Number of Trades
-* Traded Quantity
-* Futures Contracts
-* Options Contracts
-* Price Change (%)
+## SQL Scripts
 
----
+The project includes SQL scripts used for data preparation and analysis.
 
-## Key Features
+- data_preparation.sql
+  - Data Cleaning
+  - Data Transformation
+  - Open Interest Calculations
+  - Change in Open Interest Calculations
+  - Long-Short Ratio Preparation
 
-* NSE & BSE Data Integration
-* FII Participation Analysis
-* Long Short Ratio Tracking
-* Open Interest Monitoring
-* Change in Open Interest Analysis
-* Delivery-Based Stock Analysis
-* Index and Stock Derivatives Analytics
-* Expiry-Wise Market Analysis
-* Dynamic Filtering and Drill-Down Capabilities
-* Market Sentiment Classification
+- derivatives_analysis.sql
+  - Open Interest Analysis
+  - Net Contracts Analysis
+  - Long-Short Ratio Analysis
+  - Futures Analysis
+  - Options Analysis
 
----
+SQL files are available in the SQL folder of this repository.
 
-## Business Impact
+## Power BI Report
 
-This dashboard helps:
+The complete Power BI dashboard file is included in this repository.
 
-* Analyze institutional market participation.
-* Track derivative market sentiment.
-* Monitor Open Interest accumulation and unwinding.
-* Identify Long Build Up and Short Covering opportunities.
-* Evaluate stock delivery trends and market strength.
-* Support data-driven trading and market research decisions.
+- NSE_Derivatives_Open_Interest_Analytics_Dashboard.pbix
 
----
-
-## Future Enhancements
-
-* Microsoft Fabric Lakehouse Integration
-* Parquet-Based Storage Architecture
-* Incremental Refresh
-* Automated NSE/BSE Data Ingestion
-* Historical Market Trend Repository
-* Advanced Market Sentiment Analytics
+The PBIX file can be downloaded to explore the report, data model, measures, and visualizations.
